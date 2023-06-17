@@ -1,0 +1,29 @@
+REQUIRED FEATURES:
+- team and player profile
+
+CONSTRAINTS:
+- must use react and material ui
+- have an input area that will dynamically change data on screen when inputted
+- have a form that scouting reports can submit
+
+TEAM JSON
+- depthChart (list of units and the players for each units)
+- standings (standing of other nba teams)
+- salaries (of players)
+- schedule (for regular season)
+- stats (stats of other nba teams in regular season)
+- last5 (stats of last 5 games)
+- next5 (stats of next 5 games)
+- team
+- teamRatings
+- curInjuries (current injuries)
+- boxScorePerGame (box score of each player on team per game)
+
+PLAYER JSON
+- awards
+- bio
+- contracts
+- scouting reports
+- curInjury
+- measurements
+- gamelog (very long all games played)
