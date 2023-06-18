@@ -13,3 +13,25 @@
     height: 4em;
     width: 4em;
 }
+
+/* player styling */
+.playerRows {
+    margin-top: 1em;
+}
+
+.playerRows Button {
+    margin: 1em;
+    border-radius: 15px;
+}
+
+.playerRows Button h4 {
+    font-size: 0.8em;
+}
+
+.playerRows Button p {
+    font-size: 0.7em;
+}
+
+.playerInfo h4, .playerInfo p{
+    color: white;
+}
