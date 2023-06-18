@@ -1,0 +1,13 @@
+.top {
+    display: flex;
+    align-items: center;
+}
+
+.top h1 {
+    text-align: center;
+    margin-left: 25%;
+}
+
+.backButton {
+    width: 10%;
+}

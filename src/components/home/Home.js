@@ -2,8 +2,7 @@ import './Home.css'
 import Button from '@mui/material/Button';
 import mavsLogo from '../../assets/dallasMavsLogo.png'
 import playerLogo from '../../assets/playerLogo.png'
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
     const navigate = useNavigate();
