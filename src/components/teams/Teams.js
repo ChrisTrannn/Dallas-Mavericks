@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import React from "react";
 import backButton from '../../assets/backButton.png'
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const Teams = () => {
     const divisions = {
@@ -15,10 +16,19 @@ const Teams = () => {
     };
 
     const navigate = useNavigate();
+    const [searchQuery, setSearchQuery] = useState('');
 
     const handleClick = (route) => {
         navigate(route, { replace: true });
     };
+
+    const handleSearchChange = (event) => {
+        setSearchQuery(event.target.value);
+    };
+
+    const filteredTeams = Object.values(divisions).flat().filter((team) =>
+        team.toLowerCase().includes(searchQuery.toLowerCase())
+    );
 
     return (
         <div>
@@ -28,15 +38,25 @@ const Teams = () => {
                 <h1>Teams Page</h1>
             </div>
 
+            <input
+                type="text"
+                placeholder="Search team..."
+                value={searchQuery}
+                onChange={handleSearchChange}
+                className="searchBar"
+            />
+
             {Object.entries(divisions).map(([division, teams]) => (
                 <div className='division' key={division}>
                     <h3>{division}</h3>
                     <div className="teamsRow">
-                        {teams.map((team) => (
-                            <Button key={team} className="teamCard" variant="contained" onClick={() => handleClick('/teams')}>
-                                <h4>{team}</h4>
-                            </Button>
-                        ))}
+                        {teams
+                            .filter((team) => team.toLowerCase().includes(searchQuery.toLowerCase()))
+                            .map((team) => (
+                                <Button key={team} className="teamCard" variant="contained" onClick={() => handleClick('/teams')}>
+                                    <h4>{team}</h4>
+                                </Button>
+                            ))}
                     </div>
                 </div>
             ))}
