@@ -1,3 +1,4 @@
+/* top styling */
 .top {
     display: flex;
     align-items: center;
@@ -9,5 +10,21 @@
 }
 
 .backButton {
-    width: 10%;
+    width: 2%;
+}
+
+/* team rows styling */
+.teamsRow {
+    display: flex;
+}
+
+.teamsRow .teamCard {
+    width: 25%;
+    margin: 1%;
+    padding: 2%;
+    border-radius: 15px;
+}
+
+.teamsRow .teamCard h4 {
+    color: white;
 }
