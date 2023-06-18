@@ -1,0 +1,59 @@
+/* styling for teamsPlayersContainer */
+.teamsPlayersContainer {
+    display: flex;
+}
+
+.teamsPlayersContainer .txt {
+    font-size: 2em;
+}
+
+.teamsPlayersContainer Button {
+    flex: 1;
+    font-size: 1.5em;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 28px;
+    width: 20em;
+    height: 20em;
+    margin: 1.2em;
+}
+
+/* styling for imgTxtContainer */
+.imgTxtContainer .icon {
+    width: 11.5em;
+    height: 11.5em;
+}
+
+.imgTxtContainer .player {
+    width: 8em;
+    height: 8em;
+}
+
+.imgTxtContainer div {
+    color: white;
+}
+
+.dot {
+    height: 10em;
+    width: 10em;
+    background-color: white;
+    border-radius: 200%;
+    margin: 1em;
+    
+    /* center image */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* media queries */
+@media screen and (max-width: 800px) {
+    .teamsPlayersContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

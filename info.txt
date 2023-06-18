@@ -1,3 +1,5 @@
+NEXT TASK: LIST FEATURES AND START DESIGNING
+
 REQUIRED FEATURES:
 - team and player profile
 
@@ -6,7 +8,7 @@ CONSTRAINTS:
 - have an input area that will dynamically change data on screen when inputted
 - have a form that scouting reports can submit
 
-TEAM JSON
+TEAM JSON FILE:
 - depthChart (list of units and the players for each units)
 - standings (standing of other nba teams)
 - salaries (of players)
@@ -19,7 +21,7 @@ TEAM JSON
 - curInjuries (current injuries)
 - boxScorePerGame (box score of each player on team per game)
 
-PLAYER JSON
+PLAYER JSON FILE
 - awards
 - bio
 - contracts
