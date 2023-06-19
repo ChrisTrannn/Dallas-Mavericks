@@ -120,21 +120,44 @@ const PlayerProfile = () => {
       <Modal open={isGamelogModalOpen} onClose={handleGamelogModalClose}>
         <div className="modal">
           <h3>Gamelog</h3>
-          {/* Gamelog Content */}
+          <ul className='outsideGamelog'>
+            {playerData.gameLog.map((game, index) => (
+              <li key={index}>
+                <ul className='insideGamelog'>
+                  <li>Opponent: {game.opponent}</li>
+                  <li>Outcome: {game.outcome}</li>
+                  <li>Points: {game.pts}</li>
+                  <li>Rebounds: {game.reb}</li>
+                  <li>Assists: {game.ast}</li>
+                  <li>Steals: {game.stl}</li>
+                  <li>Blocks: {game.blk}</li>
+
+                </ul>
+              </li>
+            ))}
+          </ul>
         </div>
       </Modal>
 
       <Modal open={isAwardsModalOpen} onClose={handleAwardsModalClose}>
         <div className="modal">
           <h3>Awards</h3>
-          {/* Awards Content */}
+          <ul>
+            {playerData.awards.map((award, index) => (
+              <li key={index}>{award.award}, {award.season}</li>
+            ))}
+          </ul>
         </div>
       </Modal>
 
       <Modal open={isContractsModalOpen} onClose={handleContractsModalClose}>
         <div className="modal">
           <h3>Contracts</h3>
-          {/* Contracts Content */}
+          <ul>
+            {playerData.contracts.map((contract, index) => (
+              <li key={index}>Salary: ${contract.totalSalary}, {contract.salaryYear}</li>
+            ))}
+          </ul>
         </div>
       </Modal>
 

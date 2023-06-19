@@ -116,3 +116,23 @@
     max-height: 400px;
     overflow-y: auto;
 }
+
+.outsideGamelog {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.insideGamelog {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;  
+    padding: 0;
+    padding-left: 2em;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    padding: 1em;
+}
