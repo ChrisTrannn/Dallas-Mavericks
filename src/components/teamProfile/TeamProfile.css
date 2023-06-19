@@ -1,0 +1,92 @@
+/* top styling */
+.top {
+    display: flex;
+    align-items: center;
+}
+
+.top h1 {
+    text-align: center;
+    margin-left: 30%;
+}
+
+.backButton {
+    height: 4em;
+    width: 4em;
+}
+
+/* container1 styling */
+.container {
+    display: flex;
+    margin: 2em;
+    gap: 2.2em;
+}
+
+.container Button {
+    padding: 3em;
+    width: 50%;
+    height: 10em;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.container .item {
+    flex: 1;
+}
+
+/* modal reports styling */
+.modal {
+    background-color: white;
+    width: 30em;
+    border-radius: 15px;
+    padding: 2em;
+
+    /* positioning of the modal body*/
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.modal ul {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* schedule styling */
+.outsideSchedule {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.insideSchedule {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;  
+    padding: 0;
+    padding-left: 2em;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    padding: 1em;
+}
+
+.insideRoster {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;  
+    padding: 0;
+    padding-left: 2em;
+    border-radius: 15px;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    padding: 1em;
+    border: 1px solid black;
+}
+
+.insideRoster img {
+    width: 4em;
+}

@@ -18,7 +18,11 @@ const Teams = () => {
     const navigate = useNavigate();
     const [searchQuery, setSearchQuery] = useState('');
 
-    const handleClick = (route) => {
+    const handleClick = (team) => {
+        navigate(`/team-profile?path=${encodeURIComponent(team)}`, { replace: true });
+    };
+
+    const handleClick2 = (route) => {
         navigate(route, { replace: true });
     };
 
@@ -34,7 +38,7 @@ const Teams = () => {
         <div>
             
             <div className="top">
-                <img src={backButton} onClick={() => handleClick('/home')} className='backButton'></img>
+                <img src={backButton} onClick={() => handleClick2('/home')} className='backButton'></img>
                 <h1>Teams Page</h1>
             </div>
 
@@ -53,7 +57,7 @@ const Teams = () => {
                         {teams
                             .filter((team) => team.toLowerCase().includes(searchQuery.toLowerCase()))
                             .map((team) => (
-                                <Button key={team} className="teamCard" variant="contained" onClick={() => handleClick('/teams')}>
+                                <Button key={team} className="teamCard" variant="contained" onClick={() => handleClick(team)}>
                                     <h4>{team}</h4>
                                 </Button>
                             ))}

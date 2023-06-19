@@ -80,7 +80,7 @@ const PlayerProfile = () => {
       <div>
         <div className="top">
           <img src={backButton} onClick={() => handleClick('/players')} className='backButton' alt="Back Button"/>
-          <h1>Player not found</h1>
+          <h1>Player data not found</h1>
         </div>
       </div>
     );

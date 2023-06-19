@@ -27,7 +27,7 @@ const Players = () => {
     'Oshae Brissett': '../../data/brissett.json',
     'Jalen Lecque': '../../data/lecque.json',
     'Naz Mitrou-Long': '../../data/mitrou-long.json',
-    'C.J. Wilcox': '../../data/wilcox.json'
+    'C.J. Wilcox': '../../data/wilcox.json',
   };
 
   const navigate = useNavigate();
