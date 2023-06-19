@@ -11,7 +11,7 @@ npm start
 ```
 In order to obtain a production build, simply run
 ```
-npm build
+npm run build
 ```
 
 ## Figma Design File
