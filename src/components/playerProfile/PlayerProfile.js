@@ -5,8 +5,14 @@ import backButton from '../../assets/backButton.png';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
+import { useLocation } from 'react-router-dom';
 
 const PlayerProfile = () => {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const encodedPath = queryParams.get('path');
+  const path = decodeURIComponent(encodedPath);
+
   const playerData = oladipoJson
 
   const navigate = useNavigate();
@@ -67,6 +73,18 @@ const PlayerProfile = () => {
   const birthYear = new Date(birthDate).getFullYear();
   const currentYear = currentDate.getFullYear();
   const playerAge = currentYear - birthYear;
+
+
+  if (path != '../../data/oladipo.json') {
+    return (
+      <div>
+        <div className="top">
+          <img src={backButton} onClick={() => handleClick('/players')} className='backButton' alt="Back Button"/>
+          <h1>Player not found</h1>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>
