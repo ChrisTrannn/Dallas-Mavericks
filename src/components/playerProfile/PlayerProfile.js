@@ -1,17 +1,38 @@
 import './PlayerProfile.css'
-import React from 'react';
+import React, { useState } from 'react';
 import oladipoJson from '../../data/oladipo.json';
 import backButton from '../../assets/backButton.png';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
+import Modal from '@mui/material/Modal';
 
 const PlayerProfile = () => {
   const playerData = oladipoJson
 
   const navigate = useNavigate();
-
   const handleClick = (route) => {
     navigate(route, { replace: true });
+  };
+
+  let reports = [];
+  for (let i = 0; i < playerData.scoutingReports.length; i++) {
+    reports.push(playerData.scoutingReports[i].report);
+  }
+
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [scoutingReports, setScoutingReports] = useState(reports);
+
+  const handleModalOpen = () => {
+    setModalOpen(true);
+  };
+  const handleModalClose = () => {
+    setModalOpen(false);
+  };
+  const handleAddScoutingReport = (event) => {
+    event.preventDefault();
+    const report = event.target.elements.report.value;
+    setScoutingReports([...scoutingReports, report]);
+    event.target.reset();
   };
 
   const playerName = playerData.bio[0].name;
@@ -46,7 +67,7 @@ const PlayerProfile = () => {
       </div>
 
       <div className='container2'>
-        <Button variant='contained' className='item'>Scouting Report</Button>
+        <Button variant='contained' className='item' onClick={handleModalOpen}>Scouting Report</Button>
         <Button variant='contained' className='item'>Gamelog</Button>
       </div>
 
@@ -54,6 +75,21 @@ const PlayerProfile = () => {
         <Button variant='contained'>Awards</Button>
         <Button variant='contained'>Contracts</Button>
       </div>
+
+      <Modal open={isModalOpen} onClose={handleModalClose}>
+        <div className="modal">
+          <h3>Scouting Reports</h3>
+          <ul>
+            {scoutingReports.map((report, index) => (
+              <li key={index}>{report}</li>
+            ))}
+          </ul>
+          <form onSubmit={handleAddScoutingReport}>
+            <input type="text" name="report" placeholder="Enter scouting report" />
+            <Button type="submit">Add</Button>
+          </form>
+        </div>
+      </Modal>
 
     </div>
   );

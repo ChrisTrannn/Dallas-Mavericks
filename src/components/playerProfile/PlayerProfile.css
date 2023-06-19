@@ -97,3 +97,22 @@
 .container3 .item {
     flex: 1;
 }
+
+/* modal styling */
+.modal {
+    background-color: white;
+    width: 20em;
+    border-radius: 15px;
+    padding: 2em;
+
+    /* positioning of the modal body*/
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.modal ul {
+    max-height: 400px;
+    overflow-y: auto;
+}
