@@ -19,15 +19,41 @@ const PlayerProfile = () => {
     reports.push(playerData.scoutingReports[i].report);
   }
 
-  const [isModalOpen, setModalOpen] = useState(false);
+  const [isScoutingReportModalOpen, setScoutingReportModalOpen] = useState(false);
+  const [isGamelogModalOpen, setGamelogModalOpen] = useState(false);
+  const [isAwardsModalOpen, setAwardsModalOpen] = useState(false);
+  const [isContractsModalOpen, setContractsModalOpen] = useState(false);
+
   const [scoutingReports, setScoutingReports] = useState(reports);
 
-  const handleModalOpen = () => {
-    setModalOpen(true);
+  const handleScoutingReportModalOpen = () => {
+    setScoutingReportModalOpen(true);
   };
-  const handleModalClose = () => {
-    setModalOpen(false);
+  const handleScoutingReportModalClose = () => {
+    setScoutingReportModalOpen(false);
   };
+
+  const handleGamelogModalOpen = () => {
+    setGamelogModalOpen(true);
+  };
+  const handleGamelogModalClose = () => {
+    setGamelogModalOpen(false);
+  };
+
+  const handleAwardsModalOpen = () => {
+    setAwardsModalOpen(true);
+  };
+  const handleAwardsModalClose = () => {
+    setAwardsModalOpen(false);
+  };
+
+  const handleContractsModalOpen = () => {
+    setContractsModalOpen(true);
+  };
+  const handleContractsModalClose = () => {
+    setContractsModalOpen(false);
+  };
+
   const handleAddScoutingReport = (event) => {
     event.preventDefault();
     const report = event.target.elements.report.value;
@@ -67,16 +93,16 @@ const PlayerProfile = () => {
       </div>
 
       <div className='container2'>
-        <Button variant='contained' className='item' onClick={handleModalOpen}>Scouting Report</Button>
-        <Button variant='contained' className='item'>Gamelog</Button>
+        <Button variant='contained' className='item' onClick={handleScoutingReportModalOpen}>Scouting Report</Button>
+        <Button variant='contained' className='item'  onClick={handleGamelogModalOpen}>Gamelog</Button>
       </div>
 
       <div className='container3'>
-        <Button variant='contained'>Awards</Button>
-        <Button variant='contained'>Contracts</Button>
+        <Button variant='contained' onClick={handleAwardsModalOpen}>Awards</Button>
+        <Button variant='contained' onClick={handleContractsModalOpen}>Contracts</Button>
       </div>
 
-      <Modal open={isModalOpen} onClose={handleModalClose}>
+      <Modal open={isScoutingReportModalOpen} onClose={handleScoutingReportModalClose}>
         <div className="modal">
           <h3>Scouting Reports</h3>
           <ul>
@@ -88,6 +114,27 @@ const PlayerProfile = () => {
             <input type="text" name="report" placeholder="Enter scouting report" />
             <Button type="submit">Add</Button>
           </form>
+        </div>
+      </Modal>
+
+      <Modal open={isGamelogModalOpen} onClose={handleGamelogModalClose}>
+        <div className="modal">
+          <h3>Gamelog</h3>
+          {/* Gamelog Content */}
+        </div>
+      </Modal>
+
+      <Modal open={isAwardsModalOpen} onClose={handleAwardsModalClose}>
+        <div className="modal">
+          <h3>Awards</h3>
+          {/* Awards Content */}
+        </div>
+      </Modal>
+
+      <Modal open={isContractsModalOpen} onClose={handleContractsModalClose}>
+        <div className="modal">
+          <h3>Contracts</h3>
+          {/* Contracts Content */}
         </div>
       </Modal>
 
