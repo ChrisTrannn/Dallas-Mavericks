@@ -13,3 +13,87 @@
     height: 4em;
     width: 4em;
 }
+
+/* container1 styling */
+.container1 {
+    display: flex;
+    margin: 2em;
+}
+
+.container1 .item {
+    flex: 1;
+}
+
+.headshot {
+    width: 25em;
+}
+
+.container1 .description {
+    background-color: #1A76D2;
+    border-radius: 15px;
+    width: 100%;
+    margin-left: 3em;
+}
+
+.container1 .description h3 {
+    color: white;
+    padding-left: 1.5em;
+    padding-top: 0.4em;
+    font-size: 1.5em;
+}
+
+.container1 .description p {
+    color: white;
+}
+
+.container1 .description ul {
+    list-style-type: none;
+    padding-left: 2.34em;
+    display: flex;
+    flex-direction: column;
+}
+
+.container1 .description li {
+    color: white;
+    padding-bottom: 0.7em;
+}
+
+/* container2 styling */
+.container2 {
+    display: flex;
+    margin: 2em;
+    gap: 2.2em;
+}
+
+.container2 Button {
+    padding: 3em;
+    width: 50%;
+    height: 10em;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.container2 .item {
+    flex: 1;
+}
+
+/* container3 styling */
+.container3 {
+    display: flex;
+    margin: 2em;
+    gap: 2.2em;
+}
+
+.container3 Button {
+    padding: 3em;
+    width: 50%;
+    height: 10em;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.container3 .item {
+    flex: 1;
+}

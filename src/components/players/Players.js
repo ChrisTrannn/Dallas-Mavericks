@@ -14,7 +14,20 @@ const Players = () => {
     'Caris LeVert': '../../data/levert.json',
     'Jeremy Lamb': '../../data/lamb.json',
     'T.J. McConnell': '../../data/mcconnell.json',
-    'Justin Holiday': '../../data/holiday.json'
+    'Justin Holiday': '../../data/holiday.json',
+    'Doug McDermott': '../../data/mcdermott.json',
+    'Goga Bitadze': '../../data/bitadze.json',
+    'Edmond Sumner': '../../data/sumner.json',
+    'JaKarr Sampson': '../../data/sampson.json',
+    'T.J. Leaf': '../../data/leaf.json',
+    'Brian Bowen II': '../../data/bowen.json',
+    'Kelan Martin': '../../data/martin.json',
+    'Cassius Stanley': '../../data/stanley.json',
+    'Amida Brimah': '../../data/brimah.json',
+    'Oshae Brissett': '../../data/brissett.json',
+    'Jalen Lecque': '../../data/lecque.json',
+    'Naz Mitrou-Long': '../../data/mitrou-long.json',
+    'C.J. Wilcox': '../../data/wilcox.json'
   };
 
   const navigate = useNavigate();
