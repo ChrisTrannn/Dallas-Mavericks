@@ -1,0 +1,15 @@
+/* top styling */
+.top {
+    display: flex;
+    align-items: center;
+}
+
+.top h1 {
+    text-align: center;
+    margin-left: 30%;
+}
+
+.backButton {
+    height: 4em;
+    width: 4em;
+}
