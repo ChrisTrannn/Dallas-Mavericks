@@ -2,12 +2,16 @@
 A web page for the Dallas Mavericks front office to use for roster building purposes.
 
 ## Installation
-Make sure to have the latest version of node.js installed on your computer. Next, clone the repository onto your computer. Run an ```npm install``` to install all the dependencies in the package.json file.
+Make sure to have the latest version of node.js installed on your computer. Next, clone the repository onto your computer. Run an ```npm install``` to install all the dependencies in the package.json file. Installation is finished once a node_modules folder appears under the project directory
 
 ## How to Use
 After following the steps from the installation phase. Run the following command to start the local server
 ```
 npm start
+```
+In order to obtain a production build, simply run
+```
+npm build
 ```
 
 ## Figma Design File
